@@ -81,18 +81,19 @@ export default function FormScreen() {
 
     return !erro;
   };
+
   return (
     <View style={styles.container}>
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>
+        <View style={styles.labelContainer}>
           <Ionicons
             name="person-outline"
-            size={16}
+            size={18}
             color={colors.primary}
-            style={{ marginRight: 8 }}
+            style={{ marginRight: 4 }}
           />
-          {' Nome:'}
-        </Text>
+          <Text style={styles.label}>{' Nome:'}</Text>
+        </View>
         <TextInput
           style={styles.input}
           value={nome}
@@ -104,15 +105,15 @@ export default function FormScreen() {
       </View>
 
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>
+        <View style={styles.labelContainer}>
           <Ionicons
             name="mail-outline"
-            size={16}
+            size={18}
             color={colors.primary}
-            style={{ marginRight: 8 }}
+            style={{ marginRight: 4 }}
           />
-          {' Email:'}
-        </Text>
+          <Text style={styles.label}>{' Email:'}</Text>
+        </View>
         <TextInput
           style={styles.input}
           value={email}
@@ -125,15 +126,15 @@ export default function FormScreen() {
       </View>
 
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>
+        <View style={styles.labelContainer}>
           <Ionicons
             name="call-outline"
-            size={16}
+            size={18}
             color={colors.primary}
-            style={{ marginRight: 8 }}
+            style={{ marginRight: 4 }}
           />
-          {' Telefone:'}
-        </Text>
+          <Text style={styles.label}>{' Telefone:'}</Text>
+        </View>
         <TextInput
           style={styles.input}
           value={telefone}
@@ -146,15 +147,15 @@ export default function FormScreen() {
       </View>
 
       <View style={styles.inputContainer}>
-        <Text style={styles.label}>
+        <View style={styles.labelContainer}>
           <Ionicons
             name="chatbubbles-outline"
-            ssize={16}
+            size={18}
             color={colors.primary}
-            style={{ marginRight: 8 }}
+            style={{ marginRight: 4 }}
           />
-          {' Escreva sua mensagem'}
-        </Text>
+          <Text style={styles.label}>{' Escreva sua mensagem'}</Text>
+        </View>
         <TextInput
           style={[styles.input, styles.textArea]}
           value={mensagem}

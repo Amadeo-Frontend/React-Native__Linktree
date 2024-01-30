@@ -3,6 +3,7 @@ import colors from '../../constants/Colors';
 
 export const styles = StyleSheet.create({
   container: {
+    width: '100%',
     backgroundColor: colors.bg,
     color: colors.primary,
     flex: 1,
@@ -15,6 +16,11 @@ export const styles = StyleSheet.create({
   label: {
     color: colors.primary,
     fontSize: 16,
+  },
+  labelContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
     marginBottom: 5,
   },
   input: {
@@ -47,7 +53,6 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.secundary,
     borderRadius: 5,
-    marginHorizontal: 5,
     marginBottom: 15,
     marginTop: 15,
     justifyContent: 'center',
@@ -55,6 +60,6 @@ export const styles = StyleSheet.create({
   },
   buttonText: {
     textAlign: 'center',
-    color: colors.secundary,
+    color: colors.primary,
   },
 });
