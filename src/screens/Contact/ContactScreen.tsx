@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { styles } from './Styles';
 import Toast from 'react-native-toast-message';
+import { Ionicons } from '@expo/vector-icons';
+import colors from '../../constants/Colors';
 
 export default function FormScreen() {
   const [nome, setNome] = useState('');
@@ -25,6 +27,10 @@ export default function FormScreen() {
         text1: 'Formulário enviado!',
         text2: 'Sua mensagem foi enviada com sucesso.',
         onHide: () => {
+          setNome('');
+          setEmail('');
+          setTelefone('');
+          setMensagem('');
           navigation.navigate('Home');
         },
       });
@@ -75,54 +81,101 @@ export default function FormScreen() {
 
     return !erro;
   };
-
   return (
     <View style={styles.container}>
-      <Text style={styles.label}>Nome:</Text>
-      <TextInput
-        style={styles.input}
-        value={nome}
-        onChangeText={setNome}
-        placeholder="Digite seu nome"
-        placeholderTextColor="gray" // Definindo a cor cinza para o placeholder
-      />
-      {!!erroNome && <Text style={styles.erroTexto}>{erroNome}</Text>}
+      <View style={styles.inputContainer}>
+        <Text style={styles.label}>
+          <Ionicons
+            name="person-outline"
+            size={16}
+            color={colors.primary}
+            style={{ marginRight: 8 }}
+          />
+          {' Nome:'}
+        </Text>
+        <TextInput
+          style={styles.input}
+          value={nome}
+          onChangeText={setNome}
+          placeholder="Digite seu nome"
+          placeholderTextColor="gray"
+        />
+        {!!erroNome && <Text style={styles.erroTexto}>{erroNome}</Text>}
+      </View>
 
-      <Text style={styles.label}>Email:</Text>
-      <TextInput
-        style={styles.input}
-        value={email}
-        onChangeText={setEmail}
-        placeholder="Digite seu email"
-        keyboardType="email-address"
-        placeholderTextColor="gray"
-      />
-      {!!erroEmail && <Text style={styles.erroTexto}>{erroEmail}</Text>}
+      <View style={styles.inputContainer}>
+        <Text style={styles.label}>
+          <Ionicons
+            name="mail-outline"
+            size={16}
+            color={colors.primary}
+            style={{ marginRight: 8 }}
+          />
+          {' Email:'}
+        </Text>
+        <TextInput
+          style={styles.input}
+          value={email}
+          onChangeText={setEmail}
+          placeholder="Digite seu email"
+          keyboardType="email-address"
+          placeholderTextColor="gray"
+        />
+        {!!erroEmail && <Text style={styles.erroTexto}>{erroEmail}</Text>}
+      </View>
 
-      <Text style={styles.label}>Telefone:</Text>
-      <TextInput
-        style={styles.input}
-        value={telefone}
-        onChangeText={setTelefone}
-        placeholder="Digite seu telefone"
-        keyboardType="phone-pad"
-        placeholderTextColor="gray"
-      />
-      {!!erroTelefone && <Text style={styles.erroTexto}>{erroTelefone}</Text>}
+      <View style={styles.inputContainer}>
+        <Text style={styles.label}>
+          <Ionicons
+            name="call-outline"
+            size={16}
+            color={colors.primary}
+            style={{ marginRight: 8 }}
+          />
+          {' Telefone:'}
+        </Text>
+        <TextInput
+          style={styles.input}
+          value={telefone}
+          onChangeText={setTelefone}
+          placeholder="Digite seu telefone"
+          keyboardType="phone-pad"
+          placeholderTextColor="gray"
+        />
+        {!!erroTelefone && <Text style={styles.erroTexto}>{erroTelefone}</Text>}
+      </View>
 
-      <Text style={styles.label}>Qual a emergência?</Text>
-      <TextInput
-        style={[styles.input, styles.textArea]}
-        value={mensagem}
-        onChangeText={setMensagem}
-        placeholder="Descreva a emergência"
-        multiline
-        numberOfLines={4}
-        placeholderTextColor="gray"
-      />
-      {!!erroMensagem && <Text style={styles.erroTexto}>{erroMensagem}</Text>}
+      <View style={styles.inputContainer}>
+        <Text style={styles.label}>
+          <Ionicons
+            name="chatbubbles-outline"
+            ssize={16}
+            color={colors.primary}
+            style={{ marginRight: 8 }}
+          />
+          {' Escreva sua mensagem'}
+        </Text>
+        <TextInput
+          style={[styles.input, styles.textArea]}
+          value={mensagem}
+          onChangeText={setMensagem}
+          placeholder="Digite aqui sua mensagem"
+          multiline
+          numberOfLines={4}
+          placeholderTextColor="gray"
+        />
+        {!!erroMensagem && <Text style={styles.erroTexto}>{erroMensagem}</Text>}
+      </View>
 
-      <Button title="Enviar" onPress={handleSubmit} />
+      <TouchableOpacity style={styles.button} onPress={handleSubmit}>
+        <Ionicons
+          name="enter-outline"
+          size={24}
+          color="white"
+          style={{ marginRight: 8 }}
+        />
+        <Text style={styles.buttonText}>ENVIAR</Text>
+      </TouchableOpacity>
     </View>
   );
 }

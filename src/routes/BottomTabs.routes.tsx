@@ -1,9 +1,11 @@
-import * as React from 'react';
+import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';
 import HomeScreen from '../screens/Home/HomeScreen';
 import ContactScreen from '../screens/Contact/ContactScreen';
-import PortfoloScreen from '../screens/Portfolio/PortfolioScreen';
+import PortfolioScreen from '../screens/Portfolio/PortfolioScreen';
+import { MaterialIcons } from '@expo/vector-icons';
+import colors from '../constants/Colors';
 
 const Tab = createMaterialBottomTabNavigator();
 
@@ -12,13 +14,37 @@ function AppNavigation() {
     <NavigationContainer>
       <Tab.Navigator
         initialRouteName="Home"
-        activeColor="#f0edf6"
-        inactiveColor="#333"
-        barStyle={{ backgroundColor: '#101010' }}
+        activeColor={colors.primary}
+        inactiveColor={colors.secundary}
+        barStyle={{ backgroundColor: colors.tertiary }}
       >
-        <Tab.Screen name="Home" component={HomeScreen} />
-        <Tab.Screen name="Portfolio" component={PortfoloScreen} />
-        <Tab.Screen name="Contato" component={ContactScreen} />
+        <Tab.Screen
+          name="Home"
+          component={HomeScreen}
+          options={{
+            tabBarIcon: () => (
+              <MaterialIcons name="home" size={24} color={colors.accent} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Portfolio"
+          component={PortfolioScreen}
+          options={{
+            tabBarIcon: () => (
+              <MaterialIcons name="art-track" size={24} color={colors.accent} />
+            ),
+          }}
+        />
+        <Tab.Screen
+          name="Contato"
+          component={ContactScreen}
+          options={{
+            tabBarIcon: () => (
+              <MaterialIcons name="contacts" size={24} color={colors.accent} />
+            ),
+          }}
+        />
       </Tab.Navigator>
     </NavigationContainer>
   );

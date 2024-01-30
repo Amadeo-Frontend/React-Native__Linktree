@@ -8,13 +8,13 @@ import {
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 
-export default function PortfoloScreen() {
+export default function PortfolioScreen() {
   return (
     <View style={styles.container}>
       <Image source={Logo} style={{ height: wp(45), width: hp(45) }} />
       <View>
         <TouchableOpacity>
-          <Text>Ativar Bat Sinal</Text>
+          <Text style={styles.text}>Ativar Bat Sinal</Text>
         </TouchableOpacity>
       </View>
     </View>
