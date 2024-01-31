@@ -23,7 +23,6 @@ export const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'flex-start',
-    marginBottom: 5,
   },
   cardsContainer: {
     flexDirection: 'row',
@@ -34,7 +33,8 @@ export const styles = StyleSheet.create({
   card: {
     width: '48%', // Ajuste conforme necessário
     aspectRatio: 1, // Mantém a proporção quadrada
-    marginBottom: 16,
+    marginBottom: 20,
+    marginTop: 10,
     position: 'relative',
   },
   cardImage: {
@@ -42,7 +42,7 @@ export const styles = StyleSheet.create({
     height: '100%',
     borderRadius: 8,
     borderWidth: 4,
-    borderColor: colors.secundary,
+    borderColor: colors.tertiary,
   },
   overlay: {
     ...StyleSheet.absoluteFillObject,

@@ -1,6 +1,9 @@
 import { View, Text, Image, TouchableOpacity, Linking } from 'react-native';
 import React from 'react';
-import Logo from '../../../assets/img/eu.jpg';
+import snakeImg from '../../../assets/img/snake.jpg';
+import pass from '../../../assets/img/pass.jpg';
+import sinal from '../../../assets/img/sinal.jpg';
+import lottie from '../../../assets/img/lottie.jpg';
 import { styles } from './Styles';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -47,7 +50,7 @@ export default function PortfolioScreen() {
       <View style={styles.cardsContainer}>
         {/* Card 1 */}
         <TouchableOpacity onPress={snake} style={styles.card}>
-          <Image source={Logo} style={styles.cardImage} />
+          <Image source={snakeImg} style={styles.cardImage} />
           <View style={styles.overlay}>
             <Text style={styles.overlayText}>Projeto Snake Game</Text>
           </View>
@@ -55,7 +58,7 @@ export default function PortfolioScreen() {
 
         {/* Card 2 */}
         <TouchableOpacity onPress={batSinal} style={styles.card}>
-          <Image source={Logo} style={styles.cardImage} />
+          <Image source={sinal} style={styles.cardImage} />
           <View style={styles.overlay}>
             <Text style={styles.overlayText}>Projeto Bat Sinal</Text>
           </View>
@@ -63,7 +66,7 @@ export default function PortfolioScreen() {
 
         {/* Card 3 */}
         <TouchableOpacity onPress={batPass} style={styles.card}>
-          <Image source={Logo} style={styles.cardImage} />
+          <Image source={pass} style={styles.cardImage} />
           <View style={styles.overlay}>
             <Text style={styles.overlayText}>Projeto Bat Pass</Text>
           </View>
@@ -71,7 +74,7 @@ export default function PortfolioScreen() {
 
         {/* Card 4 */}
         <TouchableOpacity onPress={lottieApp} style={styles.card}>
-          <Image source={Logo} style={styles.cardImage} />
+          <Image source={lottie} style={styles.cardImage} />
           <View style={styles.overlay}>
             <Text style={styles.overlayText}>Projeto Lottie app</Text>
           </View>
