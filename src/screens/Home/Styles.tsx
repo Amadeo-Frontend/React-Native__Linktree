@@ -23,6 +23,14 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     borderColor: colors.secundary,
   },
+  title: {
+    fontSize: 30,
+  },
+  subTitle: {
+    color: colors.primary,
+    borderBottomWidth: 2,
+    borderBottomColor: colors.tertiary,
+  },
   buttonContainer: {
     width: '100%',
     flexDirection: 'column',

@@ -1,6 +1,6 @@
 import { View, Text, Image, TouchableOpacity, Linking } from 'react-native';
 import React from 'react';
-import { Ionicons } from '@expo/vector-icons'; // Importe os ícones desejados
+import { Ionicons } from '@expo/vector-icons';
 import Logo from '../../../assets/img/eu.jpg';
 import { styles } from './Styles';
 import colors from '../../constants/Colors';
@@ -21,6 +21,14 @@ export default function HomeScreen() {
     <View style={styles.container}>
       <View style={styles.imageContainer}>
         <Image source={Logo} style={styles.profileImage} />
+      </View>
+      <View>
+        <Text style={[styles.title, { color: colors.primary }]}>
+          Amadeo Bon
+        </Text>
+        <Text style={[styles.subTitle, { color: colors.primary }]}>
+          Frontend Developer Mobile
+        </Text>
       </View>
       <View style={styles.buttonContainer}>
         <TouchableOpacity style={styles.button} onPress={openLinkedIn}>
