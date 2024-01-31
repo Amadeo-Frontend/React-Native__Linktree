@@ -42,7 +42,10 @@ por meio de abas na parte inferior da tela.
 
 
 
-https://github.com/Amadeo-Frontend/React-Native__Linktree/assets/104178969/f642aff6-05c0-4eb3-854c-b068fbc1d76c
+
+
+https://github.com/Amadeo-Frontend/React-Native__Linktree/assets/104178969/ba687a48-d346-4d03-b521-69760cf41911
+
 
 
 
