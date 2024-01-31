@@ -10,6 +10,12 @@ export const styles = StyleSheet.create({
     padding: 20,
     justifyContent: 'center',
   },
+  title: {
+    color: colors.primary,
+    fontSize: 24,
+    marginTop: 20,
+    marginBottom: 20,
+  },
   inputContainer: {
     marginBottom: 16,
   },
@@ -53,8 +59,8 @@ export const styles = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.secundary,
     borderRadius: 5,
-    marginBottom: 15,
-    marginTop: 15,
+    marginBottom: 10,
+    marginTop: 8,
     justifyContent: 'center',
     flexDirection: 'row',
   },

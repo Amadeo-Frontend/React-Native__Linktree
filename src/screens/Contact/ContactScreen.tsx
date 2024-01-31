@@ -84,6 +84,16 @@ export default function FormScreen() {
 
   return (
     <View style={styles.container}>
+      <View style={styles.labelContainer}>
+        <Ionicons
+          name="clipboard-outline"
+          size={24}
+          color={colors.primary}
+          style={{ marginRight: 6 }}
+        />
+
+        <Text style={styles.title}>{'Entre em contato'}</Text>
+      </View>
       <View style={styles.inputContainer}>
         <View style={styles.labelContainer}>
           <Ionicons

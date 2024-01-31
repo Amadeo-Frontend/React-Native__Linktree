@@ -3,7 +3,6 @@ import React from 'react';
 import Logo from '../../../assets/img/eu.jpg';
 import { styles } from './Styles';
 import { Ionicons } from '@expo/vector-icons';
-import colors from '../../constants/Colors';
 
 export default function PortfolioScreen() {
   const batSinal = () => {
